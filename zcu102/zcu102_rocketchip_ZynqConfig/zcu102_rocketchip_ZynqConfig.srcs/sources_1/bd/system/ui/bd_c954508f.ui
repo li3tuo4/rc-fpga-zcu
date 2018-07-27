@@ -1,0 +1,25 @@
+{
+   guistr: "# # String gsaved with Nlview 6.6.8  2016-12-21 bk=1.3817 VDI=40 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port FCLK_RESET0_N -pg 1 -y 70 -defaultsOSRD
+preplace port S_AXI -pg 1 -y 70 -defaultsOSRD
+preplace port M_AXI -pg 1 -y 190 -defaultsOSRD
+preplace port ext_clk_in -pg 1 -y 90 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -y 170 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 4 -y 190 -defaultsOSRD
+preplace inst axi_interconnect_1 -pg 1 -lvl 2 -y 130 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 3 -y 150 -defaultsOSRD
+preplace netloc S_AXI_1 1 0 2 10J 60 380J
+preplace netloc processing_system7_0_M_AXI_GP0 1 3 1 N
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 5 20 10 NJ 10 NJ 10 1330 70 NJ
+preplace netloc proc_sys_reset_0_interconnect_aresetn 1 1 3 390 270 NJ 270 1350
+preplace netloc axi_interconnect_0_M00_AXI 1 4 1 NJ
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 3 400 260 NJ 260 1360
+preplace netloc axi_interconnect_1_M00_AXI 1 2 1 710
+preplace netloc ext_clk_in_1 1 0 4 10 80 380 250 700 60 1340
+levelinfo -pg 1 -10 200 550 1020 1520 1690 -top 0 -bot 310
+",
+}
+{
+   da_zynq_ultra_ps_e_cnt: "1",
+}

@@ -1,0 +1,295 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Wed Jul 11 15:04:27 2018
+| Host         : tuol-skylake running 64-bit Ubuntu 16.04.4 LTS
+| Command      : report_methodology -file rocketchip_wrapper_methodology_drc_routed.rpt -rpx rocketchip_wrapper_methodology_drc_routed.rpx
+| Design       : rocketchip_wrapper
+| Device       : xczu9eg-ffvb1156-2-i
+| Speed File   : -2
+| Design State : Routed
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 51
++-----------+----------+--------------------------------------------+------------+
+| Rule      | Severity | Description                                | Violations |
++-----------+----------+--------------------------------------------+------------+
+| SYNTH-6   | Warning  | Timing of a block RAM might be sub-optimal | 13         |
+| SYNTH-10  | Warning  | Wide multiplier                            | 20         |
+| SYNTH-11  | Warning  | DSP output not registered                  | 3          |
+| SYNTH-13  | Warning  | combinational multiplier                   | 1          |
+| SYNTH-16  | Warning  | Address collision                          | 13         |
+| TIMING-17 | Warning  | Non-clocked sequential cell                | 1          |
++-----------+----------+--------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+SYNTH-6#1 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance top/FPGAZynqTop/DefaultCoreplex/tiles_0/HellaCache/meta/_T_2352_0_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#2 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance top/FPGAZynqTop/DefaultCoreplex/tiles_0/HellaCache/meta/_T_2352_1_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#3 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance top/FPGAZynqTop/DefaultCoreplex/tiles_0/HellaCache/meta/_T_2352_2_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#4 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance top/FPGAZynqTop/DefaultCoreplex/tiles_0/HellaCache/meta/_T_2352_3_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#5 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance top/FPGAZynqTop/DefaultCoreplex/tiles_0/HellaCache/mshrs/sdq_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#6 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance top/FPGAZynqTop/DefaultCoreplex/tiles_0/icache/icache/_T_1159_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#7 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance top/FPGAZynqTop/DefaultCoreplex/tiles_0/icache/icache/_T_1178_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#8 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance top/FPGAZynqTop/DefaultCoreplex/tiles_0/icache/icache/_T_1197_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#9 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance top/FPGAZynqTop/DefaultCoreplex/tiles_0/icache/icache/_T_1216_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#10 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance top/FPGAZynqTop/DefaultCoreplex/tiles_0/icache/icache/tag_array_0_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#11 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance top/FPGAZynqTop/DefaultCoreplex/tiles_0/icache/icache/tag_array_1_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#12 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance top/FPGAZynqTop/DefaultCoreplex/tiles_0/icache/icache/tag_array_2_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#13 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance top/FPGAZynqTop/DefaultCoreplex/tiles_0/icache/icache/tag_array_3_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-10#1 Warning
+Wide multiplier  
+Detected multiplier at top/FPGAZynqTop/DefaultCoreplex/tiles_0/core/div/_T_159 of size 18x9, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#2 Warning
+Wide multiplier  
+Detected multiplier at top/FPGAZynqTop/DefaultCoreplex/tiles_0/core/div/_T_159__0 of size 14x9, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#3 Warning
+Wide multiplier  
+Detected multiplier at top/FPGAZynqTop/DefaultCoreplex/tiles_0/core/div/_T_159__1 of size 18x9, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#4 Warning
+Wide multiplier  
+Detected multiplier at top/FPGAZynqTop/DefaultCoreplex/tiles_0/core/div/_T_159__2 of size 18x9, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#5 Warning
+Wide multiplier  
+Detected multiplier at top/FPGAZynqTop/DefaultCoreplex/tiles_0/fpuOpt/DivSqrtRecF64/mul/_T_23 of size 18x21, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#6 Warning
+Wide multiplier  
+Detected multiplier at top/FPGAZynqTop/DefaultCoreplex/tiles_0/fpuOpt/DivSqrtRecF64/mul/_T_23__0 of size 21x18, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#7 Warning
+Wide multiplier  
+Detected multiplier at top/FPGAZynqTop/DefaultCoreplex/tiles_0/fpuOpt/DivSqrtRecF64/mul/_T_23__2 of size 18x21, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#8 Warning
+Wide multiplier  
+Detected multiplier at top/FPGAZynqTop/DefaultCoreplex/tiles_0/fpuOpt/DivSqrtRecF64/mul/_T_23__3 of size 18x18, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#9 Warning
+Wide multiplier  
+Detected multiplier at top/FPGAZynqTop/DefaultCoreplex/tiles_0/fpuOpt/DivSqrtRecF64/mul/_T_23__4 of size 21x18, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#10 Warning
+Wide multiplier  
+Detected multiplier at top/FPGAZynqTop/DefaultCoreplex/tiles_0/fpuOpt/DivSqrtRecF64/mul/_T_23__5 of size 18x18, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#11 Warning
+Wide multiplier  
+Detected multiplier at top/FPGAZynqTop/DefaultCoreplex/tiles_0/fpuOpt/DivSqrtRecF64/mul/_T_23__6 of size 18x18, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#12 Warning
+Wide multiplier  
+Detected multiplier at top/FPGAZynqTop/DefaultCoreplex/tiles_0/fpuOpt/DivSqrtRecF64/mul/_T_23__7 of size 18x18, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#13 Warning
+Wide multiplier  
+Detected multiplier at top/FPGAZynqTop/DefaultCoreplex/tiles_0/fpuOpt/FPUFMAPipe/fma/_T_16 of size 18x20, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#14 Warning
+Wide multiplier  
+Detected multiplier at top/FPGAZynqTop/DefaultCoreplex/tiles_0/fpuOpt/FPUFMAPipe/fma/_T_16__0 of size 20x18, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#15 Warning
+Wide multiplier  
+Detected multiplier at top/FPGAZynqTop/DefaultCoreplex/tiles_0/fpuOpt/FPUFMAPipe/fma/_T_16__2 of size 18x20, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#16 Warning
+Wide multiplier  
+Detected multiplier at top/FPGAZynqTop/DefaultCoreplex/tiles_0/fpuOpt/FPUFMAPipe/fma/_T_16__3 of size 18x18, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#17 Warning
+Wide multiplier  
+Detected multiplier at top/FPGAZynqTop/DefaultCoreplex/tiles_0/fpuOpt/FPUFMAPipe/fma/_T_16__4 of size 20x18, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#18 Warning
+Wide multiplier  
+Detected multiplier at top/FPGAZynqTop/DefaultCoreplex/tiles_0/fpuOpt/FPUFMAPipe/fma/_T_16__5 of size 18x18, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#19 Warning
+Wide multiplier  
+Detected multiplier at top/FPGAZynqTop/DefaultCoreplex/tiles_0/fpuOpt/FPUFMAPipe/fma/_T_16__6 of size 18x18, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#20 Warning
+Wide multiplier  
+Detected multiplier at top/FPGAZynqTop/DefaultCoreplex/tiles_0/fpuOpt/FPUFMAPipe/fma/_T_16__7 of size 18x18, it is decomposed from a wide multipler into 10 DSP blocks.
+Related violations: <none>
+
+SYNTH-11#1 Warning
+DSP output not registered  
+DSP instance top/FPGAZynqTop/DefaultCoreplex/tiles_0/fpuOpt/DivSqrtRecF64/mul/_T_23__1 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#2 Warning
+DSP output not registered  
+DSP instance top/FPGAZynqTop/DefaultCoreplex/tiles_0/fpuOpt/FPUFMAPipe/fma/_T_16__1 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#3 Warning
+DSP output not registered  
+DSP instance top/FPGAZynqTop/DefaultCoreplex/tiles_0/fpuOpt/sfma/fma/_T_16 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-13#1 Warning
+combinational multiplier  
+Detected combinational multiplier in DSP instance top/FPGAZynqTop/DefaultCoreplex/tiles_0/fpuOpt/sfma/fma/_T_16__0.
+Related violations: <none>
+
+SYNTH-16#1 Warning
+Address collision  
+Block RAM top/FPGAZynqTop/DefaultCoreplex/tiles_0/HellaCache/data/_T_744_0_reg may get memory collision error if read and write address collide. Use of address collision resolution circuitry is recommended.
+Related violations: <none>
+
+SYNTH-16#2 Warning
+Address collision  
+Block RAM top/FPGAZynqTop/DefaultCoreplex/tiles_0/HellaCache/data/_T_811_0_reg may get memory collision error if read and write address collide. Use of address collision resolution circuitry is recommended.
+Related violations: <none>
+
+SYNTH-16#3 Warning
+Address collision  
+Block RAM top/FPGAZynqTop/DefaultCoreplex/tiles_0/HellaCache/data/_T_878_0_reg may get memory collision error if read and write address collide. Use of address collision resolution circuitry is recommended.
+Related violations: <none>
+
+SYNTH-16#4 Warning
+Address collision  
+Block RAM top/FPGAZynqTop/DefaultCoreplex/tiles_0/HellaCache/data/_T_945_0_reg may get memory collision error if read and write address collide. Use of address collision resolution circuitry is recommended.
+Related violations: <none>
+
+SYNTH-16#5 Warning
+Address collision  
+Block RAM top/FPGAZynqTop/DefaultCoreplex/tiles_0/HellaCache/meta/_T_2352_0_reg may get memory collision error if read and write address collide. Use of address collision resolution circuitry is recommended.
+Related violations: <none>
+
+SYNTH-16#6 Warning
+Address collision  
+Block RAM top/FPGAZynqTop/DefaultCoreplex/tiles_0/HellaCache/meta/_T_2352_1_reg may get memory collision error if read and write address collide. Use of address collision resolution circuitry is recommended.
+Related violations: <none>
+
+SYNTH-16#7 Warning
+Address collision  
+Block RAM top/FPGAZynqTop/DefaultCoreplex/tiles_0/HellaCache/meta/_T_2352_2_reg may get memory collision error if read and write address collide. Use of address collision resolution circuitry is recommended.
+Related violations: <none>
+
+SYNTH-16#8 Warning
+Address collision  
+Block RAM top/FPGAZynqTop/DefaultCoreplex/tiles_0/HellaCache/meta/_T_2352_3_reg may get memory collision error if read and write address collide. Use of address collision resolution circuitry is recommended.
+Related violations: <none>
+
+SYNTH-16#9 Warning
+Address collision  
+Block RAM top/FPGAZynqTop/DefaultCoreplex/tiles_0/HellaCache/mshrs/sdq_reg may get memory collision error if read and write address collide. Use of address collision resolution circuitry is recommended.
+Related violations: <none>
+
+SYNTH-16#10 Warning
+Address collision  
+Block RAM top/FPGAZynqTop/DefaultCoreplex/tiles_0/icache/icache/tag_array_0_reg may get memory collision error if read and write address collide. Use of address collision resolution circuitry is recommended.
+Related violations: <none>
+
+SYNTH-16#11 Warning
+Address collision  
+Block RAM top/FPGAZynqTop/DefaultCoreplex/tiles_0/icache/icache/tag_array_1_reg may get memory collision error if read and write address collide. Use of address collision resolution circuitry is recommended.
+Related violations: <none>
+
+SYNTH-16#12 Warning
+Address collision  
+Block RAM top/FPGAZynqTop/DefaultCoreplex/tiles_0/icache/icache/tag_array_2_reg may get memory collision error if read and write address collide. Use of address collision resolution circuitry is recommended.
+Related violations: <none>
+
+SYNTH-16#13 Warning
+Address collision  
+Block RAM top/FPGAZynqTop/DefaultCoreplex/tiles_0/icache/icache/tag_array_3_reg may get memory collision error if read and write address collide. Use of address collision resolution circuitry is recommended.
+Related violations: <none>
+
+TIMING-17#1 Warning
+Non-clocked sequential cell  
+The clock pin top/slave/resetter/reg_reset_reg_bufg_place/I is not reached by a timing clock
+Related violations: <none>
+
+

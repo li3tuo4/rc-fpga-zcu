@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x0" bd:device="xczu9eg-ffvb1156-1-i" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2017.1" bd:top="design_1" bd:version="1.00.a">
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>design_1</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:parameters>
+      <spirit:parameter>
+        <spirit:name>isTop</spirit:name>
+        <spirit:value spirit:format="bool" spirit:resolve="immediate">true</spirit:value>
+      </spirit:parameter>
+    </spirit:parameters>
+    <spirit:model>
+      <spirit:views>
+        <spirit:view>
+          <spirit:name>BlockDiagram</spirit:name>
+          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
+          <spirit:hierarchyRef spirit:library="BlockDiagram" spirit:name="design_1_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+        </spirit:view>
+      </spirit:views>
+    </spirit:model>
+  </spirit:component>
+
+  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>design_1_imp</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>zynq_ultra_ps_e_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="zynq_ultra_ps_e" spirit:vendor="xilinx.com" spirit:version="3.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_zynq_ultra_ps_e_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PSS_REF_CLK__FREQMHZ">33.333</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CAN1__PERIPHERAL__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CAN1__PERIPHERAL__IO">MIO 24 .. 25</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DPAUX__PERIPHERAL__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DPAUX__PERIPHERAL__IO">MIO 27 .. 30</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__FPGA_PL0_ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__FPGA_PL1_ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__FPGA_PL2_ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__FPGA_PL3_ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__ENET3__PERIPHERAL__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__ENET3__PERIPHERAL__IO">MIO 64 .. 75</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__ENET3__GRP_MDIO__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__ENET3__GRP_MDIO__IO">MIO 76 .. 77</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__GPIO0_MIO__PERIPHERAL__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__GPIO0_MIO__IO">MIO 0 .. 25</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__GPIO1_MIO__PERIPHERAL__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__GPIO1_MIO__IO">MIO 26 .. 51</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__I2C0__PERIPHERAL__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__I2C0__PERIPHERAL__IO">MIO 14 .. 15</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__I2C1__PERIPHERAL__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__I2C1__PERIPHERAL__IO">MIO 16 .. 17</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PCIE__PERIPHERAL__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PCIE__PERIPHERAL__ROOTPORT_IO">MIO 31</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PCIE__LANE0__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PCIE__LANE0__IO">GT Lane0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__USB0__REF_CLK_SEL">Ref Clk2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__USB0__REF_CLK_FREQ">26</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DP__REF_CLK_SEL">Ref Clk3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DP__REF_CLK_FREQ">27</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__SATA__REF_CLK_SEL">Ref Clk1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__SATA__REF_CLK_FREQ">125</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PCIE__REF_CLK_SEL">Ref Clk0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PCIE__REF_CLK_FREQ">100</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DP__LANE_SEL">Single Lower</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PCIE__DEVICE_PORT_TYPE">Root Port</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PCIE__MAXIMUM_LINK_WIDTH">x1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PCIE__LINK_SPEED">5.0 Gb/s</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PCIE__BAR0_ENABLE">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PCIE__DEVICE_ID">0xD021</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PCIE__CLASS_CODE_BASE">0x06</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PCIE__CLASS_CODE_SUB">0x4</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PCIE__CRS_SW_VISIBILITY">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PMU__PERIPHERAL__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PMU__GPI0__ENABLE">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PMU__GPI1__ENABLE">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PMU__GPI2__ENABLE">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PMU__GPI3__ENABLE">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PMU__GPI4__ENABLE">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PMU__GPI5__ENABLE">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PMU__GPO0__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PMU__GPO1__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PMU__GPO2__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PMU__GPO3__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PMU__GPO4__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PMU__GPO5__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PMU__GPO0__IO">MIO 32</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PMU__GPO1__IO">MIO 33</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PMU__GPO2__IO">MIO 34</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PMU__GPO3__IO">MIO 35</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PMU__GPO4__IO">MIO 36</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__PMU__GPO5__IO">MIO 37</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__QSPI__PERIPHERAL__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__QSPI__PERIPHERAL__IO">MIO 0 .. 12</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__QSPI__PERIPHERAL__MODE">Dual Parallel</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__QSPI__PERIPHERAL__DATA_MODE">x4</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__QSPI__GRP_FBCLK__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__QSPI__GRP_FBCLK__IO">MIO 6</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__SD1__PERIPHERAL__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__SD1__PERIPHERAL__IO">MIO 39 .. 51</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__SD1__GRP_CD__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__SD1__GRP_CD__IO">MIO 45</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__SD1__GRP_POW__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__SD1__GRP_POW__IO">MIO 43</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__SD1__GRP_WP__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__SD1__GRP_WP__IO">MIO 44</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__SD1__SLOT_TYPE">SD 3.0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__SD1__DATA_TRANSFER_MODE">8Bit</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__SWDT0__PERIPHERAL__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__SWDT0__PERIPHERAL__IO">EMIO</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__SWDT1__PERIPHERAL__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__SWDT1__PERIPHERAL__IO">EMIO</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__TTC0__PERIPHERAL__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__TTC0__PERIPHERAL__IO">EMIO</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__TTC1__PERIPHERAL__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__TTC1__PERIPHERAL__IO">EMIO</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__TTC2__PERIPHERAL__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__TTC2__PERIPHERAL__IO">EMIO</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__TTC3__PERIPHERAL__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__TTC3__PERIPHERAL__IO">EMIO</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__AL">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__BUS_WIDTH">64 Bit</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__CL">15</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__CLOCK_STOP_EN">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__RANK_ADDR_COUNT">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__CWL">14</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__BG_ADDR_COUNT">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__DEVICE_CAPACITY">4096 MBits</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__DRAM_WIDTH">8 Bits</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__ECC">Disabled</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__FREQ_MHZ">1066.50</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__MEMORY_TYPE">DDR 4</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__ROW_ADDR_COUNT">15</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__SPEED_BIN">DDR4_2133P</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__T_FAW">21.0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__T_RAS_MIN">33</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__T_RC">46.5</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__T_RCD">15</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__T_RP">15</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__TRAIN_DATA_EYE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__TRAIN_READ_GATE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__TRAIN_WRITE_LEVEL">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__VREF">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__BRC_MAPPING">ROW_BANK_COL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__STATIC_RD_MODE">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__DDR4_T_REF_MODE">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__DDR4_T_REF_RANGE">Normal (0-85)</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__PHY_DBI_MODE">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__PARITY_ENABLE">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__DDR4_CAL_MODE_ENABLE">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__DDR4_CRC_CONTROL">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__FGRM">1X</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__LP_ASR">manual normal</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__DDR4_ADDR_MAPPING">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__SELF_REF_ABORT">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DDRC__PER_BANK_REFRESH">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__UART0__PERIPHERAL__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__UART0__PERIPHERAL__IO">MIO 18 .. 19</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__UART1__PERIPHERAL__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__UART1__PERIPHERAL__IO">MIO 20 .. 21</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__USB0__PERIPHERAL__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__USB0__PERIPHERAL__IO">MIO 52 .. 63</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__USB3_0__PERIPHERAL__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__USB3_0__PERIPHERAL__IO">GT Lane2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__USE__M_AXI_GP2">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__VPLL_CTRL__FRACDATA">0.2871</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__RPLL_CTRL__FRACDATA">0.779</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__DPLL_CTRL__DIV2">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__APLL_CTRL__DIV2">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__VPLL_CTRL__DIV2">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__IOPLL_CTRL__DIV2">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__RPLL_CTRL__DIV2">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__APLL_CTRL__FBDIV">72</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__DPLL_CTRL__FBDIV">64</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__VPLL_CTRL__FBDIV">71</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__APLL_TO_LPD_CTRL__DIVISOR0">3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__DPLL_TO_LPD_CTRL__DIVISOR0">3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__VPLL_TO_LPD_CTRL__DIVISOR0">3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__ACPU_CTRL__DIVISOR0">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__DBG_TRACE_CTRL__DIVISOR0">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__DISPLAYPORT__PERIPHERAL__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__DBG_FPD_CTRL__DIVISOR0">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__DP_VIDEO_REF_CTRL__DIVISOR0">4</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__DP_VIDEO_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__DP_AUDIO_REF_CTRL__DIVISOR0">16</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__DP_AUDIO_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__DP_STC_REF_CTRL__DIVISOR0">15</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__DP_STC_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__DDR_CTRL__DIVISOR0">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__GPU_REF_CTRL__DIVISOR0">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__SATA_REF_CTRL__DIVISOR0">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__SATA__PERIPHERAL__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__SATA__LANE1__IO">GT Lane3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__PCIE_REF_CTRL__DIVISOR0">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__PL0_REF_CTRL__DIVISOR0">15</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__PL1_REF_CTRL__DIVISOR0">15</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__PL2_REF_CTRL__DIVISOR0">5</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__PL3_REF_CTRL__DIVISOR0">4</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__PL0_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__PL1_REF_CTRL__DIVISOR1">4</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__PL2_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__PL3_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__AMS_REF_CTRL__DIVISOR0">29</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__AMS_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__TIMESTAMP_REF_CTRL__DIVISOR0">15</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__USB3_DUAL_REF_CTRL__DIVISOR0">5</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__USB3_DUAL_REF_CTRL__DIVISOR1">15</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__USB3__ENABLE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__GDMA_REF_CTRL__DIVISOR0">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__DPDMA_REF_CTRL__DIVISOR0">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__TOPSW_MAIN_CTRL__DIVISOR0">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__TOPSW_LSBUS_CTRL__DIVISOR0">5</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__DBG_TSTMP_CTRL__DIVISOR0">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__IOPLL_CTRL__FBDIV">45</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__RPLL_CTRL__FBDIV">70</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__IOPLL_TO_FPD_CTRL__DIVISOR0">3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__RPLL_TO_FPD_CTRL__DIVISOR0">3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__GEM0_REF_CTRL__DIVISOR0">12</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__GEM1_REF_CTRL__DIVISOR0">12</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__GEM2_REF_CTRL__DIVISOR0">12</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__GEM3_REF_CTRL__DIVISOR0">12</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__GEM0_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__GEM1_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__GEM2_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__GEM3_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__GEM_TSU_REF_CTRL__DIVISOR0">6</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__GEM_TSU_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__USB0_BUS_REF_CTRL__DIVISOR0">6</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__USB0_BUS_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__USB1_BUS_REF_CTRL__DIVISOR0">6</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__USB1_BUS_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__QSPI_REF_CTRL__DIVISOR0">12</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__QSPI_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__SDIO0_REF_CTRL__DIVISOR0">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__SDIO0_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__SDIO1_REF_CTRL__DIVISOR0">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__SDIO1_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__UART0_REF_CTRL__DIVISOR0">15</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__UART0_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__UART1_REF_CTRL__DIVISOR0">15</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__UART1_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__I2C0_REF_CTRL__DIVISOR0">15</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__I2C0_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__I2C1_REF_CTRL__DIVISOR0">15</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__I2C1_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__SPI0_REF_CTRL__DIVISOR0">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__SPI0_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__SPI1_REF_CTRL__DIVISOR0">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__SPI1_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__CAN0_REF_CTRL__DIVISOR0">15</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__CAN0_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__CAN1_REF_CTRL__DIVISOR0">15</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__CAN1_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__CPU_R5_CTRL__DIVISOR0">3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__IOU_SWITCH_CTRL__DIVISOR0">6</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__CSU_PLL_CTRL__DIVISOR0">4</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__PCAP_CTRL__DIVISOR0">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__LPD_LSBUS_CTRL__DIVISOR0">15</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__LPD_SWITCH_CTRL__DIVISOR0">3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__DBG_LPD_CTRL__DIVISOR0">6</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__NAND_REF_CTRL__DIVISOR0">15</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__NAND_REF_CTRL__DIVISOR1">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__ADMA_REF_CTRL__DIVISOR0">3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__APLL_CTRL__SRCSEL">PSS_REF_CLK</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__DPLL_CTRL__SRCSEL">PSS_REF_CLK</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__VPLL_CTRL__SRCSEL">PSS_REF_CLK</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__ACPU_CTRL__SRCSEL">APLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__DBG_TRACE_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__DBG_FPD_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__DP_VIDEO_REF_CTRL__SRCSEL">VPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__DP_AUDIO_REF_CTRL__SRCSEL">RPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__DP_STC_REF_CTRL__SRCSEL">RPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__DDR_CTRL__SRCSEL">DPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__GPU_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__SATA_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__PCIE_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__PL0_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__PL1_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__PL2_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__PL3_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__GDMA_REF_CTRL__SRCSEL">APLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__DPDMA_REF_CTRL__SRCSEL">APLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__TOPSW_MAIN_CTRL__SRCSEL">DPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__TOPSW_LSBUS_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__DBG_TSTMP_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__IOPLL_CTRL__SRCSEL">PSS_REF_CLK</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__RPLL_CTRL__SRCSEL">PSS_REF_CLK</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__GEM0_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__GEM1_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__GEM2_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__GEM3_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__GEM_TSU_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__USB0_BUS_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__USB1_BUS_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__QSPI_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__SDIO0_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__SDIO1_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__UART0_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__UART1_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__I2C0_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__I2C1_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__SPI0_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__SPI1_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__CAN0_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__CAN1_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__CPU_R5_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__IOU_SWITCH_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__CSU_PLL_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__PCAP_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__LPD_LSBUS_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__LPD_SWITCH_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__DBG_LPD_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__NAND_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__ADMA_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__AMS_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__TIMESTAMP_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__USB3_DUAL_REF_CTRL__SRCSEL">IOPLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRF_APB__VPLL_FRAC_CFG__ENABLED">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__CRL_APB__RPLL_FRAC_CFG__ENABLED">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PSU__OVERRIDE__BASIC_CLOCK">1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+  </spirit:design>
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>Addressing/zynq_ultra_ps_e_0</spirit:library>
+    <spirit:name>zynq_ultra_ps_e</spirit:name>
+    <spirit:version>3.0</spirit:version>
+    <spirit:addressSpaces/>
+  </spirit:component>
+
+</bd:repository>

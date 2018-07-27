@@ -1,0 +1,10 @@
+set_property -dict [list \
+CONFIG.PSU__OVERRIDE__BASIC_CLOCK {1} \
+CONFIG.PSU__CRF_APB__DPLL_CTRL__DIV2 {1} \
+CONFIG.PSU__CRF_APB__DPLL_CTRL__FBDIV {64} \
+CONFIG.PSU__CRF_APB__DPLL_TO_LPD_CTRL__DIVISOR0 {3} \
+CONFIG.PSU__CRF_APB__DDR_CTRL__SRCSEL {DPLL} \
+CONFIG.PSU__DDRC__ENABLE {0} \
+] [get_bd_cells zynq_ultra_ps_e_0]
+
+save_bd_design

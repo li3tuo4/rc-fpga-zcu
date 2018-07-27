@@ -1,0 +1,4 @@
+THIRPARTY=false
+HW_PROJECT_REFERENCE=pmu-firmware_hwproj
+PROCESSOR=psu_pmu_0
+MSS_FILE=system.mss

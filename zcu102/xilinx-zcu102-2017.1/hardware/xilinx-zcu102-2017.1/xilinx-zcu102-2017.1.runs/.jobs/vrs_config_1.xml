@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_1_zynq_ultra_ps_e_0_0_synth_1" LaunchDir="/tmp/tmp.u1aSoTAvkf/presets/project_1.runs/design_1_zynq_ultra_ps_e_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/tmp/tmp.u1aSoTAvkf/presets/project_1.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="design_1_zynq_ultra_ps_e_0_0_synth_1"/>
+	</Run>
+</Runs>
+
