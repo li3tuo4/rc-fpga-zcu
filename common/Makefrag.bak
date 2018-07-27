@@ -53,7 +53,6 @@ init-submodules:
 	cd $(ROCKET_DIR) && git submodule update --init
 
 # Specialize sources for board
-#TODO Tuo porting
 # ------------------------------------------------------------------------------
 src/verilog/rocketchip_wrapper.v: $(common)/rocketchip_wrapper.v
 	cp $(common)/rocketchip_wrapper.v src/verilog/
@@ -132,19 +131,16 @@ arm-linux: arm-uboot # must first build uboot because we need tools
 
 arm-uboot:
 	# compile board-compatible u-boot
-	#git submodule update --init $(uboot_dir)
+	git submodule update --init $(uboot_dir)
 	# copy relevant configuration files
 	if [ -a soft_config/boards.cfg ] ; \
 	then \
 	    cp soft_config/boards.cfg $(uboot_dir)/ ; \
 	fi;
-	#cp soft_config/zynq_$(UBOOT_CONFIG).h $(uboot_dir)/include/configs/
-	cp soft_config/xilinx_zynqmp_$(UBOOT_CONFIG).h $(uboot_dir)/include/configs/
+	cp soft_config/zynq_$(UBOOT_CONFIG).h $(uboot_dir)/include/configs/
 	# actually build
-	#cd $(uboot_dir) && make CROSS_COMPILE=arm-xilinx-linux-gnueabi- zynq_$(UBOOT_CONFIG)_config
-	#cd $(uboot_dir) && make CROSS_COMPILE=arm-xilinx-linux-gnueabi- xilinx_zynqmp_$(UBOOT_CONFIG)_revB_config
-	cd $(uboot_dir) && make CROSS_COMPILE=aarch64-none-elf- xilinx_zynqmp_$(UBOOT_CONFIG)_revB_config
-	cd $(uboot_dir) && make CROSS_COMPILE=aarch64-none-elf- -j$(JOBS)
+	cd $(uboot_dir) && make CROSS_COMPILE=arm-xilinx-linux-gnueabi- zynq_$(UBOOT_CONFIG)_config
+	cd $(uboot_dir) && make CROSS_COMPILE=arm-xilinx-linux-gnueabi- -j$(JOBS)
 	mkdir -p $(soft_build_dir)
 	cp $(uboot_dir)/u-boot $(soft_build_dir)/u-boot.elf
 
@@ -206,8 +202,7 @@ fesvr-srcs = $(common)/csrc/fesvr_zynq.cc $(common)/csrc/zynq_tsi_driver.cc
 fesvr-hdrs = $(common)/csrc/zynq_tsi_driver.h
 fesvr-lib  = $(common_build)/libfesvr.so
 
-#CXX_FPGA      = arm-xilinx-linux-gnueabi-g++
-CXX_FPGA      = aarch64-linux-gnu-g++
+CXX_FPGA      = arm-xilinx-linux-gnueabi-g++
 CXXFLAGS_FPGA = -O2 -std=c++11 -Wall -L$(common_build) -lfesvr \
                 -Wl,-rpath,/usr/local/lib -I $(common)/csrc -I \
                 $(ROCKET_DIR)/riscv-tools/riscv-fesvr/
@@ -215,7 +210,7 @@ CXXFLAGS_FPGA = -O2 -std=c++11 -Wall -L$(common_build) -lfesvr \
 $(fesvr-lib):
 	mkdir -p $(common_build)
 	cd $(common_build); $(ROCKET_DIR)/riscv-tools/riscv-fesvr/configure \
-    --host=aarch64-linux-gnu; make
+    --host=arm-xilinx-linux-gnueabi; make
 
 $(common_build)/$(fesvr_main): $(fesvr-lib) $(fesvr-srcs) $(fesvr-hdrs)
 	$(CXX_FPGA) $(CXXFLAGS_FPGA) -o $(common_build)/$(fesvr-main) $(fesvr-srcs)

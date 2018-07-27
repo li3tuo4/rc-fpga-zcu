@@ -5,7 +5,8 @@
 #include <fcntl.h>
 #include <assert.h>
 
-#define SAI_BASE_PADDR 0x43C00000L
+//#define SAI_BASE_PADDR 0x43C00000L
+#define SAI_BASE_PADDR 0xA0000000L
 #define SAI_OUT_FIFO_DATA 0x00
 #define SAI_OUT_FIFO_COUNT 0x04
 #define SAI_IN_FIFO_DATA 0x08
