@@ -16,7 +16,7 @@ class WithBootROM extends Config((site, here, up) => {
 class WithZynqAdapter extends Config((site, here, up) => {
   case SerialFIFODepth => 16
   case ResetCycles => 10
-  case ZynqAdapterBase => BigInt(0x43C00000L)
+  case ZynqAdapterBase => BigInt(0xA0000000L)
   case ExtMem => up(ExtMem, site).copy(idBits = 6)
   case ExtIn => up(ExtIn, site).copy(beatBytes = 4, idBits = 12)
   case BlockDeviceKey => BlockDeviceConfig(nTrackers = 2)

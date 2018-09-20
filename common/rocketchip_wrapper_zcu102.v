@@ -2,27 +2,9 @@
 `include "clocking.vh"
 
 module rocketchip_wrapper
-   (DDR_addr,
-    DDR_ba,
-    DDR_cas_n,
-    DDR_ck_n,
-    DDR_ck_p,
-    DDR_cke,
-    DDR_cs_n,
-    DDR_dm,
-    DDR_dq,
-    DDR_dqs_n,
-    DDR_dqs_p,
-    DDR_odt,
-    DDR_ras_n,
-    DDR_reset_n,
-    DDR_we_n,
-    FIXED_IO_ddr_vrn,
-    FIXED_IO_ddr_vrp,
-    FIXED_IO_mio,
-    FIXED_IO_ps_clk,
-    FIXED_IO_ps_porb,
-    FIXED_IO_ps_srstb,
+   (
+   UART_rxd,
+   UART_txd,
 `ifndef differential_clock
     clk);
 `else
@@ -30,29 +12,8 @@ module rocketchip_wrapper
     SYSCLK_N);
 `endif
 
-  inout [14:0]DDR_addr;
-  inout [2:0]DDR_ba;
-  inout DDR_cas_n;
-  inout DDR_ck_n;
-  inout DDR_ck_p;
-  inout DDR_cke;
-  inout DDR_cs_n;
-  inout [3:0]DDR_dm;
-  inout [31:0]DDR_dq;
-  inout [3:0]DDR_dqs_n;
-  inout [3:0]DDR_dqs_p;
-  inout DDR_odt;
-  inout DDR_ras_n;
-  inout DDR_reset_n;
-  inout DDR_we_n;
-
-  inout FIXED_IO_ddr_vrn;
-  inout FIXED_IO_ddr_vrp;
-  inout [53:0]FIXED_IO_mio;
-  inout FIXED_IO_ps_clk;
-  inout FIXED_IO_ps_porb;
-  inout FIXED_IO_ps_srstb;
-
+input UART_rxd;
+  output UART_txd;
 `ifndef differential_clock
   input clk;
 `else
@@ -99,7 +60,7 @@ module rocketchip_wrapper
   wire [3:0]  S_AXI_arcache;
   wire [2:0]  S_AXI_arprot;
   wire [3:0]  S_AXI_arqos;
-  wire [3:0]  S_AXI_arregion;
+  //wire [3:0]  S_AXI_arregion;
 
   wire S_AXI_awready;
   wire S_AXI_awvalid;
@@ -112,7 +73,7 @@ module rocketchip_wrapper
   wire [3:0]  S_AXI_awcache;
   wire [2:0]  S_AXI_awprot;
   wire [3:0]  S_AXI_awqos;
-  wire [3:0]  S_AXI_awregion;
+  //wire [3:0]  S_AXI_awregion;
 
   wire S_AXI_wready;
   wire S_AXI_wvalid;
@@ -137,28 +98,8 @@ module rocketchip_wrapper
   wire gclk_i, gclk_fbout, host_clk_i, mmcm_locked;
 
   system system_i
-       (.DDR_addr(DDR_addr),
-        .DDR_ba(DDR_ba),
-        .DDR_cas_n(DDR_cas_n),
-        .DDR_ck_n(DDR_ck_n),
-        .DDR_ck_p(DDR_ck_p),
-        .DDR_cke(DDR_cke),
-        .DDR_cs_n(DDR_cs_n),
-        .DDR_dm(DDR_dm),
-        .DDR_dq(DDR_dq),
-        .DDR_dqs_n(DDR_dqs_n),
-        .DDR_dqs_p(DDR_dqs_p),
-        .DDR_odt(DDR_odt),
-        .DDR_ras_n(DDR_ras_n),
-        .DDR_reset_n(DDR_reset_n),
-        .DDR_we_n(DDR_we_n),
+       (
         .FCLK_RESET0_N(FCLK_RESET0_N),
-        .FIXED_IO_ddr_vrn(FIXED_IO_ddr_vrn),
-        .FIXED_IO_ddr_vrp(FIXED_IO_ddr_vrp),
-        .FIXED_IO_mio(FIXED_IO_mio),
-        .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
-        .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
-        .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
         // master AXI interface (zynq = master, fpga = slave)
         .M_AXI_araddr(M_AXI_araddr),
         .M_AXI_arburst(M_AXI_arburst), // burst type
@@ -169,7 +110,7 @@ module rocketchip_wrapper
         .M_AXI_arprot(),
         .M_AXI_arqos(),
         .M_AXI_arready(M_AXI_arready),
-        .M_AXI_arregion(),
+        //.M_AXI_arregion(), FIXME Tuo
         .M_AXI_arsize(M_AXI_arsize), // burst size (bits/transfer)
         .M_AXI_arvalid(M_AXI_arvalid),
         //
@@ -182,7 +123,7 @@ module rocketchip_wrapper
         .M_AXI_awprot(),
         .M_AXI_awqos(),
         .M_AXI_awready(M_AXI_awready),
-        .M_AXI_awregion(),
+        //.M_AXI_awregion(), FIXME Tuo
         .M_AXI_awsize(M_AXI_awsize),
         .M_AXI_awvalid(M_AXI_awvalid),
         //
@@ -215,7 +156,7 @@ module rocketchip_wrapper
         .S_AXI_arprot(S_AXI_arprot),
         .S_AXI_arqos(S_AXI_arqos),
         .S_AXI_arready(S_AXI_arready),
-        .S_AXI_arregion(S_AXI_arregion),
+        //.S_AXI_arregion(S_AXI_arregion), FIXME Tuo
         .S_AXI_arsize(S_AXI_arsize),
         .S_AXI_arvalid(S_AXI_arvalid),
         //
@@ -228,7 +169,7 @@ module rocketchip_wrapper
         .S_AXI_awprot(S_AXI_awprot),
         .S_AXI_awqos(S_AXI_awqos),
         .S_AXI_awready(S_AXI_awready),
-        .S_AXI_awregion(S_AXI_awregion),
+        //.S_AXI_awregion(S_AXI_awregion), FIXME Tuo
         .S_AXI_awsize(S_AXI_awsize),
         .S_AXI_awvalid(S_AXI_awvalid),
         //
@@ -249,6 +190,7 @@ module rocketchip_wrapper
         .S_AXI_wready(S_AXI_wready),
         .S_AXI_wstrb(S_AXI_wstrb),
         .S_AXI_wvalid(S_AXI_wvalid),
+       
         .ext_clk_in(host_clk)
         );
 
@@ -272,10 +214,10 @@ module rocketchip_wrapper
    .io_ps_axi_slave_aw_bits_size (M_AXI_awsize),
    .io_ps_axi_slave_aw_bits_burst (M_AXI_awburst),
    .io_ps_axi_slave_aw_bits_id (M_AXI_awid),
-   .io_ps_axi_slave_aw_bits_lock (),
-   .io_ps_axi_slave_aw_bits_prot (),
-   .io_ps_axi_slave_aw_bits_qos (),
-   .io_ps_axi_slave_aw_bits_region (),
+   .io_ps_axi_slave_aw_bits_lock (1'b0),
+   .io_ps_axi_slave_aw_bits_cache (4'b0),
+   .io_ps_axi_slave_aw_bits_prot (3'b0),
+   .io_ps_axi_slave_aw_bits_qos (4'b0),
 
    .io_ps_axi_slave_ar_ready (M_AXI_arready),
    .io_ps_axi_slave_ar_valid (M_AXI_arvalid),
@@ -284,10 +226,10 @@ module rocketchip_wrapper
    .io_ps_axi_slave_ar_bits_size (M_AXI_arsize),
    .io_ps_axi_slave_ar_bits_burst (M_AXI_arburst),
    .io_ps_axi_slave_ar_bits_id (M_AXI_arid),
-   .io_ps_axi_slave_ar_bits_lock (),
-   .io_ps_axi_slave_ar_bits_prot (),
-   .io_ps_axi_slave_ar_bits_qos (),
-   .io_ps_axi_slave_ar_bits_region (),
+   .io_ps_axi_slave_ar_bits_lock (1'b0),
+   .io_ps_axi_slave_ar_bits_cache (4'b0),
+   .io_ps_axi_slave_ar_bits_prot (3'b0),
+   .io_ps_axi_slave_ar_bits_qos (4'b0),
 
    .io_ps_axi_slave_w_valid (M_AXI_wvalid),
    .io_ps_axi_slave_w_ready (M_AXI_wready),
@@ -318,7 +260,6 @@ module rocketchip_wrapper
    .io_mem_axi_ar_bits_lock (S_AXI_arlock),
    .io_mem_axi_ar_bits_prot (S_AXI_arprot),
    .io_mem_axi_ar_bits_qos (S_AXI_arqos),
-   .io_mem_axi_ar_bits_region(S_AXI_arregion),
    .io_mem_axi_aw_valid (S_AXI_awvalid),
    .io_mem_axi_aw_ready (S_AXI_awready),
    .io_mem_axi_aw_bits_addr (mem_awaddr),
@@ -330,7 +271,6 @@ module rocketchip_wrapper
    .io_mem_axi_aw_bits_lock (S_AXI_awlock),
    .io_mem_axi_aw_bits_prot (S_AXI_awprot),
    .io_mem_axi_aw_bits_qos (S_AXI_awqos),
-   .io_mem_axi_aw_bits_region(S_AXI_awregion),
    .io_mem_axi_w_valid (S_AXI_wvalid),
    .io_mem_axi_w_ready (S_AXI_wready),
    .io_mem_axi_w_bits_strb (S_AXI_wstrb),
@@ -350,7 +290,8 @@ module rocketchip_wrapper
 `ifndef differential_clock
   IBUFG ibufg_gclk (.I(clk), .O(gclk_i));
 `else
-  IBUFDS #(.DIFF_TERM("TRUE"), .IBUF_LOW_PWR("TRUE"), .IOSTANDARD("DEFAULT")) clk_ibufds (.O(gclk_i), .I(SYSCLK_P), .IB(SYSCLK_N));
+  //IBUFDS #(.DIFF_TERM("TRUE"), .IBUF_LOW_PWR("TRUE"), .IOSTANDARD("DEFAULT")) clk_ibufds (.O(gclk_i), .I(SYSCLK_P), .IB(SYSCLK_N));
+  IBUFDS #(.DIFF_TERM("FALSE"), .IBUF_LOW_PWR("TRUE"), .IOSTANDARD("DEFAULT")) clk_ibufds (.O(gclk_i), .I(SYSCLK_P), .IB(SYSCLK_N));
 `endif
   BUFG  bufg_host_clk (.I(host_clk_i), .O(host_clk));
 

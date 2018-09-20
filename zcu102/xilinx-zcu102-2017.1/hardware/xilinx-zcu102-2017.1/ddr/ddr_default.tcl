@@ -1,1 +1,0 @@
-ddr4_auto2133.tcl

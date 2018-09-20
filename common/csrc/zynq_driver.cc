@@ -5,7 +5,11 @@
 #include <fcntl.h>
 #include <assert.h>
 
-#define ZYNQ_BASE_PADDR 0x43C00000L
+#include <stdio.h>
+#include <stdint.h>
+
+//#define ZYNQ_BASE_PADDR 0x43C00000L
+#define ZYNQ_BASE_PADDR 0xA0000000L
 
 #define TSI_OUT_FIFO_DATA 0x00
 #define TSI_OUT_FIFO_COUNT 0x04
@@ -38,6 +42,9 @@ zynq_driver_t::zynq_driver_t(tsi_t *tsi, BlockDevice *bdev)
 
     fd = open("/dev/mem", O_RDWR|O_SYNC);
     assert(fd != -1);
+//https://forums.xilinx.com/t5/Embedded-Linux/zynq-ultrascale-MPSoc-uio-dev-mem-access/td-p/764385
+
+
     dev = (uint8_t *) mmap(
             0, sysconf(_SC_PAGESIZE),
             PROT_READ|PROT_WRITE, MAP_SHARED, fd, ZYNQ_BASE_PADDR);
@@ -66,7 +73,14 @@ zynq_driver_t::~zynq_driver_t()
 uint32_t zynq_driver_t::read(int off)
 {
     volatile uint32_t *ptr = (volatile uint32_t *) (this->dev + off);
-    return *ptr;
+    //__builtin___clear_cache((void*)ptr, (void*)(ptr + 1));
+    //msync((void*)ptr, 4, MS_SYNC);
+    //__builtin___clear_cache((void*)ptr, (void*)(ptr + 1));
+    //msync((void*)ptr, 4, MS_SYNC);
+    uint32_t x = *ptr;
+    //__builtin___clear_cache((void*)ptr, (void*)(ptr + 1));
+    //msync((void*)ptr, 4, MS_SYNC);
+    return x;
 }
 
 void zynq_driver_t::write(int off, uint32_t word)
@@ -114,11 +128,15 @@ void zynq_driver_t::poll(void)
     if (tsi != NULL) {
         while (read(TSI_OUT_FIFO_COUNT) > 0) {
             uint32_t out_data = read(TSI_OUT_FIFO_DATA);
+            //static int count = 0;
+            //printf("zynq_driver_t::poll send %08X %d\n", out_data, count++);
             tsi->send_word(out_data);
         }
 
         while (tsi->data_available() && read(TSI_IN_FIFO_COUNT) > 0) {
             uint32_t in_data = tsi->recv_word();
+            //static int count = 0;
+            //printf("zynq_driver_t::poll receive %08X %d\n", in_data, count++);
             write(TSI_IN_FIFO_DATA, in_data);
         }
 
