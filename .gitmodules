@@ -4,23 +4,17 @@
 [submodule "zybo/fpga-images-zybo"]
 	path = zybo/fpga-images-zybo
 	url = https://github.com/ucb-bar/fpga-images-zybo.git
-[submodule "common/u-boot-xlnx"]
-	path = common/u-boot-xlnx
-	url = https://github.com/Xilinx/u-boot-xlnx.git
-	branch = master-next
-[submodule "common/linux-xlnx"]
-	path = common/linux-xlnx
-	url = https://github.com/Xilinx/linux-xlnx.git
-	branch = master-next
 [submodule "zc706/fpga-images-zc706"]
 	path = zc706/fpga-images-zc706
 	url = https://github.com/ucb-bar/fpga-images-zc706.git
 [submodule "rocket-chip"]
 	path = rocket-chip
-	url = https://github.com/ucb-bar/rocket-chip.git
+	#url = https://github.com/ucb-bar/rocket-chip.git
+	url = https://github.com/li3tuo4/rocket-chip.git
 [submodule "testchipip"]
 	path = testchipip
 	url = https://github.com/ucb-bar/testchipip.git
 [submodule "zcu102/fpga-images-zcu102"]
 	path = zcu102/fpga-images-zcu102
-	url = git@github.com-fpga-images-zcu102:li3tuo4/fpga-images-zcu102.git
+	#url = git@github.com-fpga-images-zcu102:li3tuo4/fpga-images-zcu102.git
+        url = https://github.com/li3tuo4/fpga-images-zcu102.git
