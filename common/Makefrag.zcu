@@ -29,7 +29,8 @@ proj_name = $(BOARD)_rocketchip_$(CONFIG)
 verilog_srcs = \
 	src/verilog/clocking.vh \
 	src/verilog/rocketchip_wrapper.v \
-	src/verilog/$(TOP_MODULE).$(CONFIG).v \ src/verilog/AsyncResetReg.v \
+	src/verilog/$(TOP_MODULE).$(CONFIG).v \
+	src/verilog/AsyncResetReg.v \
 	src/verilog/plusarg_reader.v \
 
 #bootimage = fpga-images-$(BOARD)/BOOT.BIN

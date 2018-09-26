@@ -40,14 +40,14 @@ hw/src/constrs/pin_constraints.xdc
 //`define RC_CLK_DIVIDE   3.003
 
 //300Mhz
-`define RC_CLK_DIVIDE   4.004
+//`define RC_CLK_DIVIDE   4.004
 
 
 //150Mhz
 //`define RC_CLK_DIVIDE   8.008
 
 //180MHz
-//`define RC_CLK_DIVIDE   6.673
+`define RC_CLK_DIVIDE   6.673
 
 `define differential_clock
 
