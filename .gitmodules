@@ -21,7 +21,8 @@
 	url = https://github.com/li3tuo4/rocket-chip.git
 [submodule "testchipip"]
 	path = testchipip
-	url = https://github.com/ucb-bar/testchipip.git
+	#url = https://github.com/ucb-bar/testchipip.git
+	url = https://github.com/li3tuo4/testchipip.git
 [submodule "zcu102/fpga-images-zcu102"]
 	path = zcu102/fpga-images-zcu102
 	#url = git@github.com-fpga-images-zcu102:li3tuo4/fpga-images-zcu102.git

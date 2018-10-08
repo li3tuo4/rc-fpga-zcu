@@ -13,6 +13,7 @@ class WithBootROM extends Config((site, here, up) => {
     contentFileName = s"../testchipip/bootrom/bootrom.rv${site(XLen)}.img")
 })
 
+//TODO TUO look into zynq adapter
 class WithZynqAdapter extends Config((site, here, up) => {
   case SerialFIFODepth => 16
   case ResetCycles => 10
