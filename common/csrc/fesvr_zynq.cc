@@ -30,6 +30,7 @@ int main(int argc, char** argv)
     char **new_argv = (char **) malloc(sizeof(char *) * argc);
     int new_argc = copy_argv(argc, argv, new_argv);
     tsi_t tsi(new_argc, new_argv);
+    //printf("construct tsi %d %s\n",new_argc,*new_argv);
 
     BlockDevice *blkdev = NULL;
     zynq_driver_t *driver;

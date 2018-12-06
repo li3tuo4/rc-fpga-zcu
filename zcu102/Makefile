@@ -6,5 +6,5 @@ BOARD_MODEL = xilinx.com:zcu102:part0:3.0
 #PART = xc7z045ffg900-2
 PART = xczu9eg-ffvb1156-2-i
 
-#include ../common/Makefrag
 include ../common/Makefrag.zcu
+

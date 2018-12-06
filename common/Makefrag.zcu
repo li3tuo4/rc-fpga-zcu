@@ -120,13 +120,46 @@ bitstream: $(bitstream)
 
 
 # Platform software generation
-#TODO TUO add petalinux flow here
+#TUO add petalinux flow here
 # ------------------------------------------------------------------------------
+#Build petalinux:
+PL_PATH = ${PETALINUX} 
+#/opt/Xilinx/petalinux
+sub_base_dir = $(base_dir)/zcu102
 
+pl_proj = petalinux_proj
+pl_output_dir = $(sub_base_dir)/$(petalinux_proj)/images/linux
+config_dir = $(sub_base_dir)/soft_config
+pl_srcs = $(config_dir)/petalinux_bd.sh $(config_dir)/config $(config_dir)/rootfs_config \
+	$(config_dir)/system-user.dtsi $(config_dir)/xilinx-zcu102-2017.1-final.bsp \
+	$(config_dir)/rocketchip_wrapper.bit $(config_dir)/rocketchip_wrapper.hdf
 
-# Handle images and git submodule for prebuilt modules
-# ------------------------------------------------------------------------------
-images = fpga-images-$(BOARD)/BOOT.BIN fpga-images-$(BOARD)/image.ub
+export_hw : $(exported_files)
+
+exported_files = $(config_dir)/rocketchip_wrapper.bit $(config_dir)/rocketchip_wrapper.hdf
+
+$(exported_files) :
+	cp -v $(proj_name)/$(proj_name).runs/impl_1/rocketchip_wrapper.bit $(config_dir)/
+	cp -v $(proj_name)/$(proj_name).runs/impl_1/rocketchip_wrapper.sysdef $(config_dir)/rocketchip_wrapper.hdf
+
+kernel_image = $(pl_output_dir)/BOOT.BIN $(pl_output_dir)/image.ub
+
+pl_setup : 
+	source $(PL_PATH)/settings.sh
+
+$(kernel_image) : $(pl_srcs)
+	bash $(config_dir)/petalinux_bd.sh $(pl_proj)
+
+kernel_image : $(kernel_image)
+
+cleanpetalinux :
+	sudo rm -rf $(pl_proj)
+	rm -rfv $(exported_files)
+
+# Handle images and git submodule for prebuilt modules # ------------------------------------------------------------------------------ 
+
+images = fpga-images-$(BOARD)/BOOT.BIN fpga-images-$(BOARD)/image.ub 
+
 $(images):
 	git submodule update --init --depth=1 fpga-images-$(BOARD)
 
@@ -163,6 +196,7 @@ fesvr-hdrs = \
 fesvr-lib = $(common_build)/libfesvr.so
 
 CXX_FPGA      = aarch64-linux-gnu-g++
+#CXX_FPGA      = arm-linux-gnueabihf-g++
 CXXFLAGS_FPGA = -O2 -std=c++11 -Wall -L$(common_build) -lfesvr \
                 -Wl,-rpath,/usr/local/lib \
 		-I $(common)/csrc -I $(testchipip)/csrc \
@@ -181,8 +215,12 @@ $(common_build)/$(fesvr-main): $(fesvr-lib) $(fesvr-srcs) $(fesvr-hdrs)
 
 fesvr-zynq: $(common_build)/$(fesvr-main)
 
+
 clean:
 	rm -f *.log *.jou *.str
 	rm -rf csrc simv-* output ucli.key vc_hdrs.h DVEfiles
 
-.PHONY: vivado project init-submodules rocket fesvr-zynq fetch-images load-sd rootfs-open rootfs-close clean
+cleanproject:
+	rm -rf $(proj_name)
+
+.PHONY: vivado project init-submodules rocket fesvr-zynq fetch-images load-sd rootfs-open rootfs-close clean cleanproject export_hw pl_setup cleanpetalinux

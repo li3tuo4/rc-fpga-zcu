@@ -48,10 +48,12 @@ zynq_driver_t::zynq_driver_t(tsi_t *tsi, BlockDevice *bdev)
     dev = (uint8_t *) mmap(
             0, sysconf(_SC_PAGESIZE),
             PROT_READ|PROT_WRITE, MAP_SHARED, fd, ZYNQ_BASE_PADDR);
+    //printf("ZYNQ_BASE_PADDR mapped tovaddr = %p\n",dev);
     assert(dev != MAP_FAILED);
 
     // reset the target
     write(SYSTEM_RESET, 1);
+    __sync_synchronize();
     write(SYSTEM_RESET, 0);
 
     // set nsectors and max_request_length
@@ -73,20 +75,22 @@ zynq_driver_t::~zynq_driver_t()
 uint32_t zynq_driver_t::read(int off)
 {
     volatile uint32_t *ptr = (volatile uint32_t *) (this->dev + off);
+    //printf("zynq_driver_t::read @%p %x\n",ptr,*ptr);
     //__builtin___clear_cache((void*)ptr, (void*)(ptr + 1));
     //msync((void*)ptr, 4, MS_SYNC);
     //__builtin___clear_cache((void*)ptr, (void*)(ptr + 1));
     //msync((void*)ptr, 4, MS_SYNC);
-    uint32_t x = *ptr;
+    //uint32_t x = *ptr;
     //__builtin___clear_cache((void*)ptr, (void*)(ptr + 1));
     //msync((void*)ptr, 4, MS_SYNC);
-    return x;
+    return *ptr;
 }
 
 void zynq_driver_t::write(int off, uint32_t word)
 {
     volatile uint32_t *ptr = (volatile uint32_t *) (this->dev + off);
     *ptr = word;
+    //printf("zynq_driver_t::write @%p %x\n",ptr,word);
 }
 
 struct blkdev_request zynq_driver_t::read_blkdev_request()
@@ -126,10 +130,13 @@ void zynq_driver_t::write_blkdev_response(struct blkdev_data &resp)
 void zynq_driver_t::poll(void)
 {
     if (tsi != NULL) {
-        while (read(TSI_OUT_FIFO_COUNT) > 0) {
+        while (read(TSI_OUT_FIFO_COUNT) > 0) { 
+//FIXME Tuo what happened is that we read nonzero value and get into this while loop
+//TSI_OUT_FIFO_DATA should not be zero, but we read zero
             uint32_t out_data = read(TSI_OUT_FIFO_DATA);
             //static int count = 0;
             //printf("zynq_driver_t::poll send %08X %d\n", out_data, count++);
+            //printf("zynq_driver_t::poll send %x\n",out_data);
             tsi->send_word(out_data);
         }
 
@@ -137,6 +144,7 @@ void zynq_driver_t::poll(void)
             uint32_t in_data = tsi->recv_word();
             //static int count = 0;
             //printf("zynq_driver_t::poll receive %08X %d\n", in_data, count++);
+            //printf("zynq_driver_t::poll recv %x\n",in_data);
             write(TSI_IN_FIFO_DATA, in_data);
         }
 
