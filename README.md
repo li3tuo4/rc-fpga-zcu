@@ -1,5 +1,5 @@
-Rocket Chip on Zynq FPGAs
-=========================
+Rocket Chip on Zynq Ultrascale+ ZCU102 FPGA 
+===================================================
 ### Warning: This repository is deprecated and does not track Rocket Chip master.
 #### Those looking for an FPGA prototype of Rocket Chip should checkout SiFive’s [Freedom platform](https://github.com/sifive/freedom). Those looking for an FPGA-accelerated simulation environment should see [FireSim](https://github.com/firesim/firesim) which will be released in the Summer
 
