@@ -1,5 +1,8 @@
 Rocket Chip on Zynq Ultrascale+ ZCU102 FPGA 
 ===================================================
+###FYI: the following README is inherited from original README from UC Berkeley's original repo.
+####Please refer to https://github.com/li3tuo4/rc-zcu102-tutorial for how to use this repository. The build flow is a bit different now. Please feel free to contribute and let us know if you meet any problem. 
+
 ### Warning: This repository is deprecated and does not track Rocket Chip master.
 #### Those looking for an FPGA prototype of Rocket Chip should checkout SiFive’s [Freedom platform](https://github.com/sifive/freedom). Those looking for an FPGA-accelerated simulation environment should see [FireSim](https://github.com/firesim/firesim) which will be released in the Summer
 
