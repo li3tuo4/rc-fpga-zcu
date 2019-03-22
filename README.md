@@ -1,5 +1,10 @@
-Rocket Chip on Zynq FPGAs
-=========================
+Rocket Chip on Zynq Ultrascale+ ZCU102 FPGA 
+===================================================
+
+### This port currently can run at 180 MHz at maximum on ZCU102. ZCU102 can at least accommodate quad-RISC-V-core rocket-chip (more cores are not tried yet). Please refer to https://github.com/li3tuo4/rc-zcu102-tutorial for how to use this repository. The build flow is a bit different from the orginal one. Please feel free to contribute. Please let me know if you meet any problem. 
+
+#### FYI: the following README is inherited from original README from UC Berkeley's original repo.
+
 ### Warning: This repository is deprecated and does not track Rocket Chip master.
 #### Those looking for an FPGA prototype of Rocket Chip should checkout SiFive’s [Freedom platform](https://github.com/sifive/freedom). Those looking for an FPGA-accelerated simulation environment should see [FireSim](https://github.com/firesim/firesim) which will be released in the Summer
 
