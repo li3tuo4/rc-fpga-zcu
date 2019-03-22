@@ -228,7 +228,7 @@ CONFIG_SUBSYSTEM_MACHINE_NAME="zcu102-revb"
 #
 # TMPDIR Location
 #
-CONFIG_TMP_DIR_LOCATION="/home/lituo/workspace/riscv/riscv-zcu102/fpga-zynq/zcu102/rocketchip_rev2/build/tmp"
+CONFIG_TMP_DIR_LOCATION="FIXME_PLDIR/build/tmp"
 
 #
 # Parallel thread execution
