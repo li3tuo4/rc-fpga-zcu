@@ -1,10 +1,21 @@
-Rocket Chip on Zynq Ultrascale+ ZCU102 FPGA 
+RISC-V Rocket Chip on Xilinx ZYNQ Ultrascale+ ZCU102 FPGA 
 ===================================================
 
-## This port currently can run at 180 MHz at maximum on ZCU102. ZCU102 can at least accommodate quad-RISC-V-core rocket-chip (more cores are not tried yet). Please refer to https://github.com/li3tuo4/rc-zcu102-tutorial for how to use this repository. The current flow is tested in `16.04.1-Ubuntu` with `4.15.0-64-generic` kernel. The build flow is a bit different from the orginal one. Please feel free to contribute. Please let me know if you meet any problem. 
+### About this repository
+This is a ZCU102 port of RISC-V on FPGA (zynq-fpga)[https://github.com/ucb-bar/fpga-zynq]. ZCU102 can at least accommodate quad-RISC-V-core rocket-chip (more cores are not tried yet). Please refer to (online doc)[https://github.com/li3tuo4/rc-zcu102-tutorial] for how to use this repository. 
 
+The current flow is tested in the following environment:
 
-## The following README content is inherited from original README from UC Berkeley's original repo.
+Software | Version 
+---|---
+OS |`16.04.1-Ubuntu` with `4.15.0-64-generic` kernel
+Bash | `4.3.48`
+Vivado | `v2017.1` 
+Petalinux |  `2017.1`
+
+This flow differs to the original flow in ARM Linux generation. Please feel free to contribute. Please let me know if you meet any problem. 
+
+*The following README content is inherited from original README from UC Berkeley's original repo.*
 
 ### Warning: This repository is deprecated and does not track Rocket Chip master.
 #### Those looking for an FPGA prototype of Rocket Chip should checkout SiFive’s [Freedom platform](https://github.com/sifive/freedom). Those looking for an FPGA-accelerated simulation environment should see [FireSim](https://github.com/firesim/firesim) which will be released in the Summer
