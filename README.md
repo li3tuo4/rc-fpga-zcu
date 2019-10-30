@@ -13,7 +13,7 @@ Bash | `4.3.48`
 Vivado | `v2017.1` 
 Petalinux |  `2017.1`
 
-This flow differs to the original flow in ARM Linux generation. Please feel free to contribute. Please let me know if you meet any problem. 
+This flow differs to the original flow in ARM Linux generation, Vivado version (for supporting this FPGA), hardware modfication (ZCU102 has different PS architecture), and minor changes in software stack. Please feel free to contribute. Please let me know if you meet any problem. 
 
 *The following README content is inherited from original README from UC Berkeley's original repo.*
 
