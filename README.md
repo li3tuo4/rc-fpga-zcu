@@ -1,10 +1,10 @@
-RISC-V Rocket Chip on Xilinx ZYNQ Ultrascale+ ZCU102 FPGA 
+RISC-V Rocket Chip on Xilinx ZYNQ Ultrascale+ ZCU102 
 ===================================================
 
 ### About this repository
-This is a ZCU102 port of RISC-V on FPGA (zynq-fpga)[https://github.com/ucb-bar/fpga-zynq]. ZCU102 can at least accommodate quad-RISC-V-core rocket-chip (more cores are not tried yet). Please refer to (online doc)[https://github.com/li3tuo4/rc-zcu102-tutorial] for how to use this repository. 
+This is a ZCU102 port of RISC-V on FPGA [zynq-fpga](ttps://github.com/ucb-bar/fpga-zynq) ZCU102 can at least accommodate quad-RISC-V-core rocket-chip (more cores are not tried yet). Please refer to [online doc](https://github.com/li3tuo4/rc-zcu102-tutorial) for how to use this repository. 
 
-The current flow is tested in the following environment:
+The current flow has been tested in the following environment:
 
 Software | Version 
 ---|---
