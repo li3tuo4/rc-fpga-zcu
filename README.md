@@ -2,7 +2,7 @@ RISC-V Rocket Chip on Xilinx ZYNQ Ultrascale+ ZCU102
 ===================================================
 
 ### About this repository
-This is a ZCU102 port of RISC-V on FPGA [zynq-fpga](https://github.com/ucb-bar/fpga-zynq) ZCU102 can at least accommodate quad-RISC-V-core rocket-chip (more cores are not tried yet). 
+This is a ZCU102 port of RISC-V on FPGA [zynq-fpga](https://github.com/ucb-bar/fpga-zynq). ZCU102 can at least accommodate quad-RISC-V-core rocket-chip. 
 On ZCU102, the highest clock frequency (clock speed) is 195 MHz for single core config with Vivado v2017.1 (default strategy).  
 Please refer to [online doc](https://github.com/li3tuo4/rc-zcu102-tutorial) for how to use this repository. About SD card (bringing hardware and software stack into FPGA), please see the [sub-repo](https://github.com/li3tuo4/fpga-images-zcu/tree/893bac7d0a77d3e3cac72f26071daf49e87be61a).
 
