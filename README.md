@@ -2,7 +2,8 @@ RISC-V Rocket Chip on Xilinx ZYNQ Ultrascale+ ZCU102
 ===================================================
 
 ### About this repository
-This is a ZCU102 port of RISC-V on FPGA [zynq-fpga](https://github.com/ucb-bar/fpga-zynq). ZCU102 can at least accommodate quad-RISC-V-core rocket-chip. 
+This is a ZCU102 port of RISC-V on FPGA [zynq-fpga](https://github.com/ucb-bar/fpga-zynq). ZCU102 can at least accommodate quad-RISC-V-core rocket-chip. The rocket chip version of this repository is same as the orginal one, which is at this April 2018 [commit](https://github.com/chipsalliance/rocket-chip/commit/7cd3352c3b802c3c50cb864aee828c6106414bb3). New rocket chip versions can be found in the mainstream rocket chip [repository](https://github.com/chipsalliance/rocket-chip).
+
 On ZCU102, the highest clock frequency (clock speed) is 195 MHz for single core config with Vivado v2017.1 (default strategy).  
 Please refer to [online doc](https://github.com/li3tuo4/rc-zcu102-tutorial) for how to use this repository. About SD card (bringing hardware and software stack into FPGA), please see the [sub-repo](https://github.com/li3tuo4/fpga-images-zcu/tree/893bac7d0a77d3e3cac72f26071daf49e87be61a).
 
@@ -15,9 +16,7 @@ Bash | `4.3.48`
 Vivado | `v2017.1` 
 Petalinux |  `2017.1`
 
-This flow differs to the original flow in ARM Linux generation, Vivado version (for supporting this FPGA), hardware modfication (ZCU102 has different PS architecture), and minor changes in software stack. 
-
-
+This flow differs to the original flow ([zynq-fpga](https://github.com/ucb-bar/fpga-zynq)) in ARM Linux generation, Vivado version (for supporting this FPGA), hardware modfication (ZCU102 has different PS architecture), SD card preparation, and minor changes in software stack. 
 
 Please feel free to contribute. Please let me know if you meet any problem. 
 
