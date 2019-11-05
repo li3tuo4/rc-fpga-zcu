@@ -14,6 +14,7 @@ Software | Version
 OS |`16.04.1-Ubuntu` with `4.15.0-64-generic` kernel
 Bash | `4.3.48`
 Make | `4.1`
+sed | `4.2.2`
 Vivado | `v2017.1` 
 Petalinux |  `2017.1`
 
