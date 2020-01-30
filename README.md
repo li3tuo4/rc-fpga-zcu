@@ -22,6 +22,10 @@ This flow differs to the original flow ([zynq-fpga](https://github.com/ucb-bar/f
 
 Please feel free to contribute. Please let me know if you meet any problem. 
 
+### Issues with new zcu102 board
+If you are using a newer zcu102 (even with the same revision number) with this repo and get stuck at the FSBL stage during boot up, you might have encountered this [issue](https://www.xilinx.com/support/answers/71961.html). If so, please try to follow these [steps](https://github.com/li3tuo4/rc-fpga-zcu/issues/5#issuecomment-579228327) where necessary.
+
+
 *The following README content is inherited from original README from UC Berkeley's original repo.*
 
 ### Warning: This repository is deprecated and does not track Rocket Chip master.
