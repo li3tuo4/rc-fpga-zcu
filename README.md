@@ -5,7 +5,12 @@ RISC-V Rocket Chip on Xilinx ZYNQ Ultrascale+ ZCU102
 This is a ZCU102 port of RISC-V on FPGA [zynq-fpga](https://github.com/ucb-bar/fpga-zynq). ZCU102 can at least accommodate quad-RISC-V-core rocket-chip. The rocket chip version of this repository is same as the orginal one, which is at this April 2018 [commit](https://github.com/chipsalliance/rocket-chip/commit/7cd3352c3b802c3c50cb864aee828c6106414bb3). New rocket chip versions can be found in the mainstream rocket chip [repository](https://github.com/chipsalliance/rocket-chip).
 
 On ZCU102, clock frequency (clock speed) can reach 195 MHz for single core config with Vivado v2017.1.  
-Please refer to [online doc](https://github.com/li3tuo4/rc-zcu102-tutorial/blob/master/quickstart.pdf) for how to use this repository. About SD card (bringing hardware and software stack into FPGA), please see the [sub-repo](https://github.com/li3tuo4/fpga-images-zcu/tree/893bac7d0a77d3e3cac72f26071daf49e87be61a).
+Please refer to [online doc](https://github.com/li3tuo4/rc-zcu102-tutorial/blob/master/quickstart.pdf) for how to use this repository. 
+**NB I recently removed the sed command in [riscv-tools/build.sh](https://github.com/li3tuo4/riscv-tools-zcu/blob/434fdeb0f863afd7b083b57bba923da9bc98d9a6/build.sh#L11),
+because it's unreliable across host OS environment. 
+Instead, just insert a new line `|aarch \` at Line 245 in [riscv-fesvr/scripts/config.sub](https://github.com/riscv/riscv-fesvr/blob/68c12d06ebbdfe20856b886570822fe66804fd26/scripts/config.sub#L245) 
+before your first build.**
+About SD card (bringing hardware and software stack into FPGA), please see the [sub-repo](https://github.com/li3tuo4/fpga-images-zcu/tree/893bac7d0a77d3e3cac72f26071daf49e87be61a).
 
 The current flow has been tested in the following host environment:
 
