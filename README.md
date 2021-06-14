@@ -7,9 +7,13 @@ This is a ZCU102 port of RISC-V on FPGA [zynq-fpga](https://github.com/ucb-bar/f
 On ZCU102, clock frequency (clock speed) can reach 195 MHz for single core config with Vivado v2017.1.  
 Please refer to [online doc](https://github.com/li3tuo4/rc-zcu102-tutorial/blob/master/quickstart.pdf) for how to use this repository. 
 **NB I recently removed the sed command in [riscv-tools/build.sh](https://github.com/li3tuo4/riscv-tools-zcu/blob/434fdeb0f863afd7b083b57bba923da9bc98d9a6/build.sh#L11),
-because it's unreliable across host OS environment. 
-Instead, just insert a new line `|aarch \` at Line 245 in [riscv-fesvr/scripts/config.sub](https://github.com/riscv/riscv-fesvr/blob/68c12d06ebbdfe20856b886570822fe66804fd26/scripts/config.sub#L245) 
-before your first build.**
+because it's unreliable across host OS environment. **
+Instead, just insert a new line `|aarch64 \` at Line 245 in [riscv-fesvr/scripts/config.sub](https://github.com/riscv/riscv-fesvr/blob/68c12d06ebbdfe20856b886570822fe66804fd26/scripts/config.sub#L245) 
+```
+sed -i '245 i \\t| aarch64 \\' riscv-fesvr/scripts/config.sub
+```
+before your first build.
+
 About SD card (bringing hardware and software stack into FPGA), please see the [sub-repo](https://github.com/li3tuo4/fpga-images-zcu/tree/893bac7d0a77d3e3cac72f26071daf49e87be61a).
 
 The current flow has been tested in the following host environment:
