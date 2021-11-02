@@ -7,7 +7,7 @@ This is a ZCU102 port of RISC-V on FPGA [zynq-fpga](https://github.com/ucb-bar/f
 On ZCU102, clock frequency (clock speed) can reach 195 MHz for single core config with Vivado v2017.1.  
 Please refer to [online doc](https://github.com/li3tuo4/rc-zcu102-tutorial/blob/master/quickstart.pdf) for how to use this repository. 
 **NB I recently removed the sed command in [riscv-tools/build.sh](https://github.com/li3tuo4/riscv-tools-zcu/blob/434fdeb0f863afd7b083b57bba923da9bc98d9a6/build.sh#L11),
-because it's unreliable across host OS environment. **
+because it's unreliable across host OS environment.**
 Instead, just insert a new line `|aarch64 \` at Line 245 in [riscv-fesvr/scripts/config.sub](https://github.com/riscv/riscv-fesvr/blob/68c12d06ebbdfe20856b886570822fe66804fd26/scripts/config.sub#L245) 
 ```
 sed -i '245 i \\t| aarch64 \\' riscv-fesvr/scripts/config.sub
@@ -34,6 +34,25 @@ Please feel free to contribute. Please let me know if you meet any problem.
 ### Issues with new zcu102 board
 If you are using a newer zcu102 (even with the same revision number) with this repo and get stuck at the FSBL stage during boot up, you might have encountered this [issue](https://www.xilinx.com/support/answers/71961.html). If so, please try to follow these [steps](https://github.com/li3tuo4/rc-fpga-zcu/issues/5#issuecomment-579228327) where necessary.
 
+### This repo has been used by the following publication:
+```
+@article{DBLP:journals/corr/abs-2011-10249,
+  author    = {Tuo Li and
+               Bradley Hopkins and
+               Sri Parameswaran},
+  title     = {{SIMF:} Single-Instruction Multiple-Flush Mechanism for Processor
+               Temporal Isolation},
+  journal   = {CoRR},
+  volume    = {abs/2011.10249},
+  year      = {2020},
+  url       = {https://arxiv.org/abs/2011.10249},
+  eprinttype = {arXiv},
+  eprint    = {2011.10249},
+  timestamp = {Wed, 25 Nov 2020 16:34:14 +0100},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-2011-10249.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+```
 
 *The following README content is inherited from original README from UC Berkeley's original repo.*
 
