@@ -34,7 +34,7 @@ Please feel free to contribute. Please let me know if you meet any problem.
 ### Issues with new zcu102 board
 If you are using a newer zcu102 (even with the same revision number) with this repo and get stuck at the FSBL stage during boot up, you might have encountered this [issue](https://www.xilinx.com/support/answers/71961.html). If so, please try to follow these [steps](https://github.com/li3tuo4/rc-fpga-zcu/issues/5#issuecomment-579228327) where necessary.
 
-### This repo has been used by the following publication:
+### This port (rocket chip on ZCU102) has been used by the following publication:
 ```
 @article{DBLP:journals/corr/abs-2011-10249,
   author    = {Tuo Li and
