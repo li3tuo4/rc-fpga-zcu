@@ -55,7 +55,7 @@ If you are using a newer zcu102 (even with the same revision number) with this r
 ```
 
 *The following README content is inherited from original README from UC Berkeley's original repo.*
-
+---
 ### Warning: This repository is deprecated and does not track Rocket Chip master.
 #### Those looking for an FPGA prototype of Rocket Chip should checkout SiFive’s [Freedom platform](https://github.com/sifive/freedom). Those looking for an FPGA-accelerated simulation environment should see [FireSim](https://github.com/firesim/firesim) which will be released in the Summer
 
